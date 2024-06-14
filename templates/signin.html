@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>签到</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('/static/beijing.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            text-align: center;
+            color: #32CD32; /* 酸橙绿色 */
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            text-align: center;
+            color: #000080; /* 海军蓝色 */
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #32CD32; /* 酸橙绿色 */
+            color: white;
+            cursor: pointer;
+            padding: 15px 20px; /* 增加填充 */
+            font-size: 18px; /* 调整字体大小 */
+            border: none;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #228B22; /* 森林绿色 */
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #FF4500; /* 橙红色 */
+            text-decoration: none;
+            font-size: 2em;
+        }
+
+        a:hover {
+            color: #FF6347; /* 薄雾玫瑰色 */
+        }
+    </style>
+</head>
+<body>
+    <h1>签到</h1>
+    {% if 'username' in session %}
+        <h3>欢迎 {{ session['username'] }}！</h3>
+    {% endif %}
+    <form method="post">
+        <input type="submit" value="签到">
+    </form>
+    <a href="{{ url_for('index') }}">退出登录</a>
+</body>
+</html>

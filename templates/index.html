@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            background-image: url('/static/beijing.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            color: #FFE4B5;
+            font-size: 32px;
+            margin-bottom: 0;
+        }
+
+        .sub-header {
+            color: #F08080;
+            font-size: 25px;
+            margin-top: 5px;
+        }
+
+        .login-container {
+            background-color: #FFEFD5;
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        h2 {
+            color: #aaa;
+            font-size: 28px;
+            margin-top: 0; /* 将标题置于容器的顶部 */
+            text-align: left; /* 标题左对齐 */
+        }
+
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 25px);
+            padding: 16px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .login-register-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button {
+            padding: 8px 14px;
+            font-size: 20px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .admin-button {
+            background-color: lightcoral;
+            width: 125%;
+        }
+
+        .login-button {
+            background-color: lightblue;
+        }
+
+        .register-button {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">二维码扫描签到系统</div>
+    <div class="sub-header">——made by Enjun Du</div>
+
+    <div class="login-container">
+        <h2>用户登录</h2>
+        <form method="post" action="/login">
+            用户名：<input type="text" name="username" placeholder="请输入用户名"><br>
+            密码：<input type="password" name="password" placeholder="请输入密码"><br>
+            <div class="login-register-buttons">
+                <a href="/register" class="button register-button">注册</a>
+                <input type="submit" value="登录" class="button login-button">
+            </div>
+            <a href="/admin" class="button admin-button">管理员入口</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('/static/beijing.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            text-align: center;
+            color: #F08080;
+            margin-bottom: 10px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #FF8C00;
+            text-decoration: none;
+            font-size: 2em
+        }
+
+        a:hover {
+            color: #FF8C00;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <h1>用户登录</h1>
+        用户名：<input type="text" name="username"><br>
+        密码：<input type="password" name="password"><br>
+        <input type="submit" value="登录">
+    </form>
+    <a href="/register">没有账号？注册</a>
+</body>
+</html>
